@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://thymeleaf.org">
+	<!-- this is a comment  -->
+	
+<head>
+	
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<title>Let's Create Your Robot!</title>
+<style>
+.container {
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center; 
+    gap: 250px; 
+}
+.container2 {
+    padding: 20px;
+    background-color: gray;
+    display: flex;
+    align-items: center; 
+    gap: 250px; 
+}
+.line {
+	padding: 16px;
+	background-color: black;
+	display: flex;
+    align-items: center; 
+}
+
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+button img {
+    width: 48px;
+    height: 48px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.sidenav a {
+  padding: 6px 120px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+
+.sidenavb a {
+  padding: 10px 8px 6px 200px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+</style>
+</head>
+<body style="background-color:gray;">
+	
+
+    <div class="container">
+        <a href = "/login"type="button" ><img src="/images/user-removebg-preview.jpg" alt="user"> </button></a>
+       
+        
+         <img src="/images/robot.jpg" alt="microcontroler " width= "320" height = "140" >
+    </div>
+    	
+    	
+    	
+    <div class = line>
+		<h1></h1>
+		
+	<div class="sidenav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+</div>
+
+	<div class="sidenavb">
+  <a href="#about">	Boards</a>
+  <a href="#services">	Motor</a>
+  <a href="#clients">	Remote</a>
+  <a href="#contact">	Sensors</a>
+</div>
+
+	<div class="sidenavb">
+  <a href="#about">	Battery</a>
+  <a href="#services">	Frames</a>
+  <a href="#clients">	Microcontroler</a>
+  <a href="#contact">	My Bots</a>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col min-vh-100 py-3">
+            <!-- toggler -->
+            <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+                <i class="bi bi-arrow-right-square-fill fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+            </button>
+           
+        </div>
+    </div>
+</div>
+		
+
+
+
+</body>
+</html>

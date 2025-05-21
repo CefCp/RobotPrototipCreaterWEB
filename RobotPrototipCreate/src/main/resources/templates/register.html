@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register Form</title>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Custom Styles -->
+  <style>o
+    body {
+      background-image: url(/images/bgcyber.jpg);
+      
+    }
+
+    .background {
+      padding: 30px;
+      background: hsl(100, 36%, 38%);
+      color: white;
+      border: dashed black;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 400px;
+      margin: 50px auto;
+    }
+
+    .registerButton button {
+      background: hsl(200, 36%, 38%);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      margin-top: 20px;
+    }
+
+    .form-group input {
+      width: 100%;
+    }
+
+    #output {
+      text-align: center;
+      margin-top: 20px;
+      color: white;
+    }
+  </style>
+
+  <script>
+    function displayInput(event) {
+      event.preventDefault(); // Prevent form from submitting
+      var name = document.getElementById("name").value;
+      var password = document.getElementById("password").value;
+      document.getElementById("output").innerHTML = "Name: " + name + "<br>Password: " + password;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="background">
+    <h2>Register</h2>
+    <form onsubmit="displayInput(event)">
+		<div class="form-group">
+        <label for="name">Username</label>
+        <input type="username" class="form-control" id="name" placeholder="example123" required>
+      </div>
+      <div class="form-group">
+        <label for="name">E-Mail</label>
+        <input type="email" class="form-control" id="name" placeholder="preview@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="********" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Confirm Password</label>
+        <input type="password" class="form-control" id="password" placeholder="********" required>
+      </div>
+      <div class="registerButton">
+<a href = "/index">  <button  type="submit" class="btn btn-primary" >Register</button></a>
+      </div>
+    </form>
+  </div>
+
+  <div id="output"></div>
+</body>
+</html>
