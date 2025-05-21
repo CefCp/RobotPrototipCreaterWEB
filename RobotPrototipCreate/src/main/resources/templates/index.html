@@ -13,10 +13,12 @@
 <style>
 .container {
     padding: 20px;
+    width: 2560px;
     background-color: white;
     display: flex;
     align-items: center; 
-    gap: 250px; 
+    gap: 700px; 
+    margin:0;
 }
 .container2 {
     padding: 20px;
@@ -58,11 +60,16 @@ h1 {
 }
 
 .sidenavb a {
-  padding: 10px 8px 6px 200px;
+	 display: flex;
+  padding: 10px 8px 6px 700px;
+
+  margin: 0 auto;
   text-decoration: none;
   font-size: 25px;
   color: white;
   display: block;
+  align-items: center; 
+  
 }
 </style>
 </head>
@@ -70,9 +77,9 @@ h1 {
 	
 
     <div class="container">
-        <a href = "/login"type="button" ><img src="/images/user-removebg-preview.jpg" alt="user"> </button></a>
+      
        
-        
+           <a href = "/login"type="button" ><img src="/images/user-removebg-preview.jpg" alt="user"> </button></a>
          <img src="/images/robot.jpg" alt="microcontroler " width= "320" height = "140" >
     </div>
     	
@@ -81,36 +88,23 @@ h1 {
     <div class = line>
 		<h1></h1>
 		
-	<div class="sidenav">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
+
+
+	<div class="sidenavb" >
+  <a href="#Boards">	Boards</a>
+  <a href="#Motor">	Motor</a>
+  <a href="#Remote">	Remote</a>
+  <a href="#Sensors">	Sensors</a>
 </div>
 
 	<div class="sidenavb">
-  <a href="#about">	Boards</a>
-  <a href="#services">	Motor</a>
-  <a href="#clients">	Remote</a>
-  <a href="#contact">	Sensors</a>
-</div>
-
-	<div class="sidenavb">
-  <a href="#about">	Battery</a>
-  <a href="#services">	Frames</a>
-  <a href="#clients">	Microcontroler</a>
-  <a href="#contact">	My Bots</a>
+  <a href="#Battery">	Battery</a>
+  <a href="#Frames">	Frames</a>
+  <a href="#Microcontroler">	Microcontroler</a>
+  <a href="#Bots">	My Bots</a>
 </div>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col min-vh-100 py-3">
-            <!-- toggler -->
-            <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
-                <i class="bi bi-arrow-right-square-fill fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
-            </button>
-           
-        </div>
-    </div>
+
 </div>
 		
 

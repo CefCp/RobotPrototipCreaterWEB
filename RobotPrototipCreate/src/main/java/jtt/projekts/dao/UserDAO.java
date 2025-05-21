@@ -8,6 +8,6 @@ import jtt.projekts.dto.User;
 
 public interface UserDAO extends GenericDAO<User> {
 	User getByName(String name)  throws SQLException;
-	List<User> getByEmail(String email)  throws SQLException;
+	User getByEmail(String email)  throws SQLException;
 	List<User> getByRole(String role)  throws SQLException;
 }

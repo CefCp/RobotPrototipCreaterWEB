@@ -65,20 +65,20 @@ public class UserDAOImpl implements UserDAO{
 
 	@Override
 	public List<User> getAllData() {
-		userResp.findAll();
-		return null;
+		List<User> users = (List<User>) userResp.findAll();
+		return users;
 	}
 
 	@Override
 	public User getByName(String name) throws SQLException {
 		
-		return null;
+		return userResp.findByName(name);
 	}
 
 	@Override
-	public List<User> getByEmail(String email) throws SQLException {
+	public User getByEmail(String email) throws SQLException {
 		
-		return null;
+		return userResp.findByEmail(email);
 	}
 
 	@Override
