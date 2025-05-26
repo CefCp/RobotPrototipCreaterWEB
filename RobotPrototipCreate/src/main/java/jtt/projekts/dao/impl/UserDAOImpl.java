@@ -83,8 +83,8 @@ public class UserDAOImpl implements UserDAO{
 
 	@Override
 	public List<User> getByRole(String role) throws SQLException {
-		
-		return null;
+		List<User> users = (List<User>) userResp.findBYRole(role);
+		return users;
 	}
 
 }

@@ -1,5 +1,7 @@
 package jtt.projekts.reposotories;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
@@ -12,4 +14,9 @@ public interface UserRespority extends CrudRepository<User, Integer>{
 	
 	@Query("SELECT e FROM User e WHERE e.email = :email")
 	User findByEmail(@Param("name") String email);
+	
+	@Query("Select r FROM User r Where r.role = :role")
+	List<User> findBYRole(@Param("name") String role);
+	
+	
 }

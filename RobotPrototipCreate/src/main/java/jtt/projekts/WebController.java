@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import jakarta.annotation.PostConstruct;
 import jtt.projekts.dao.UserDAO;
 import jtt.projekts.dao.impl.UserDAOImpl;
 import jtt.projekts.dto.User;
@@ -42,6 +41,15 @@ public class WebController {
 		
 		model.addAttribute("message", "hello world");
 		return "register";
+		
+		
+	}
+	
+	@GetMapping("/shop")
+	public String greeting4(Model model) {
+		
+		model.addAttribute("message", "hello world");
+		return "shop";
 		
 		
 	}
