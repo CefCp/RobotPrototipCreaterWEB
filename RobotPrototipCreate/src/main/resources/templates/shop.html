@@ -1,84 +1,124 @@
 <!DOCTYPE html>
-<html  xmlns:th="http://thymeleaf.org">
+<html xmlns:th="http://thymeleaf.org">
 <head>
-	
-	 <title>Boards</title>
-	
-<style>
-.container {
-    padding: 20px;
-    width: 2560px;
-    background-color: white;
-    display: flex;
-    align-items: center; 
-    gap: 700px; 
-    margin:0;
-  
-}
-.container2 {
-    padding: 20px;
-    width: 2560px;
-    background-color: black;
-    display: flex;
-    align-items: center; 
-    gap: 160px; 
-    margin:0;
-  
-}
-.sidenavb a {
-	 display: flex;
-  padding: 10px 8px 6px 70px;
-
-  margin: 0 auto;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
-  align-items: center; 
+  <title>SHOP</title>
+  <style>
+    .container {
+      padding: 20px;
+      width: 2560px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      gap: 700px;
+      margin: 0;
+    }
+    .container2 {
+      padding: 20px;
+      width: 2560px;
       background-color: black;
-}
-	</style>
+      display: flex;
+      align-items: center;
+      gap: 70px;
+      margin: 0;
+    }
+    .sidenavb a {
+      padding: 10px 8px 6px 70px;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      display: block;
+      background-color: black;
+      cursor: pointer;
+    }
+    /* Content sections */
+    .content-section {
+      display: none;  /* hide all by default */
+      padding: 20px;
+      background-color: white;
+      margin-top: 20px;
+    }
+    /* Show the active section */
+    .content-section.active {
+      display: block;
+    }
+  </style>
 </head>
-	
 <body style="background-color:gray;">
-	
-<div class="container">
-<h1 style= "text-align: center;" >Lets create the bot!</h1>
-</div>
 
+<div class="container">
+  <h1 style="text-align: center;">Let's create the bot!</h1>
+</div>
 
 <div class="container2">
-<div class="sidenavb">
-  <a href="#Bots">	My Bots</a>
+  <div class="sidenavb"><a data-section="myBots">My Bots</a></div>
+  <div class="sidenavb"><a data-section="battery">Battery</a></div>
+  <div class="sidenavb"><a data-section="board">Board</a></div>
+  <div class="sidenavb"><a data-section="frame">Frame</a></div>
+  <div class="sidenavb"><a data-section="microcontroller">Microcontroller</a></div>
+  <div class="sidenavb"><a data-section="motor">Motor</a></div>
+  <div class="sidenavb"><a data-section="remote">Remote</a></div>
+  <div class="sidenavb"><a data-section="sensor">Sensor</a></div>
 </div>
 
-  <div class="sidenavb">
-  <a href="#Bots">Battery	</a>
-  </div>
-  
-  <div class="sidenavb">
-  <a href="#Bots">Board	</a>
-  </div>
-  
-  <div class="sidenavb">
-  <a href="#Bots">Frame	</a>
-  </div>
-  
-  <div class="sidenavb">
-  <a href="#Bots">Microcontroller	</a>
-  </div>
-  
-  <div class="sidenavb">
-  <a href="#Bots">Motor	</a>
-  </div>
-  
-  <div class="sidenavb">
-  <a href="#Bots">Remote	</a>
-  </div>
-  
-  <div class="sidenavb">
-  <a href="#Bots">Sensor	</a>
+<!-- Content sections -->
+<div id="myBots" class="content-section active">
+  <h2>My Bots</h2>
+  <p>Content for My Bots goes here...</p>
 </div>
-		</div>
-</body>	
+
+<div id="battery" class="content-section">
+  <h2>Battery</h2>
+  <p>Details about Battery...</p>
+  <input type="radio"></input>
+</div>
+
+<div id="board" class="content-section">
+  <h2>Board</h2>
+  <p>Details about Board...</p>
+</div>
+
+<div id="frame" class="content-section">
+  <h2>Frame</h2>
+  <p>Details about Frame...</p>
+</div>
+
+<div id="microcontroller" class="content-section">
+  <h2>Microcontroller</h2>
+  <p>Details about Microcontroller...</p>
+</div>
+
+<div id="motor" class="content-section">
+  <h2>Motor</h2>
+  <p>Details about Motor...</p>
+</div>
+
+<div id="remote" class="content-section">
+  <h2>Remote</h2>
+  <p>Details about Remote...</p>
+</div>
+
+<div id="sensor" class="content-section">
+  <h2>Sensor</h2>
+  <p>Details about Sensor...</p>
+</div>
+
+<script>
+  // Grab all nav links
+  const navLinks = document.querySelectorAll('.sidenavb a');
+  const sections = document.querySelectorAll('.content-section');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const targetSection = link.getAttribute('data-section');
+
+      // Hide all sections
+      sections.forEach(section => section.classList.remove('active'));
+
+      // Show target section
+      document.getElementById(targetSection).classList.add('active');
+    });
+  });
+</script>
+
+</body>
 </html>
