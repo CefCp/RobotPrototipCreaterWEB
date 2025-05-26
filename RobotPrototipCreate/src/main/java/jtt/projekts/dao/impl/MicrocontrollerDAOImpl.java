@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import jtt.projekts.dao.MicrocontrolerDAO;
 import jtt.projekts.dto.Microcontroller;
-import jtt.projekts.dto.User;
 import jtt.projekts.reposotories.MicrocontrolerRespority;
 
 public class MicrocontrollerDAOImpl implements MicrocontrolerDAO{
@@ -20,7 +19,7 @@ public class MicrocontrollerDAOImpl implements MicrocontrolerDAO{
 		
 		boolean microExists = false;
 		for(Microcontroller u : users) {
-			if(u.getAllData() == value.getAllData()) {
+			if(u.getName() == value.getName()) {
 				microExists = true;
 				break;
 			}
@@ -39,7 +38,7 @@ public class MicrocontrollerDAOImpl implements MicrocontrolerDAO{
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		controlResp.deleteById(id);
 		
 	}
 
@@ -51,14 +50,14 @@ public class MicrocontrollerDAOImpl implements MicrocontrolerDAO{
 
 	@Override
 	public Microcontroller getByID(int id) {
-		// TODO Auto-generated method stub
+		controlResp.findById(id);
 		return null;
 	}
 
 	@Override
 	public List<Microcontroller> getAllData() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Microcontroller> control = (List<Microcontroller>) controlResp.findAll();
+		return control;
 	}
 
 	@Override
