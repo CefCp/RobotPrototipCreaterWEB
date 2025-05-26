@@ -16,19 +16,7 @@ public class MicrocontrollerDAOImpl implements MicrocontrolerDAO{
 
 	@Override
 	public MicrocontrolerDAO insert(MicrocontrolerDAO value) {
-		List<MicrocontrolerDAO> users = getAllData();
-		
-		boolean microExists = false;
-		for(MicrocontrolerDAO u : users) {
-			if(u.getAllData() == value.getAllData()) {
-				microExists = true;
-				break;
-			}
-		}
-		if(microExists) return null;
-		
-		
-		return controlResp.save(value);
+		return null;
 	}
 
 	@Override
