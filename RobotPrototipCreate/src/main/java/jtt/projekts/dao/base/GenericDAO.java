@@ -1,9 +1,7 @@
 package jtt.projekts.dao.base;
 
-import java.sql.SQLException;
-import java.util.List;
 
-import jtt.projekts.dto.User;
+import java.util.List;
 
 public interface GenericDAO<T> {
 	public T insert(T value) ;

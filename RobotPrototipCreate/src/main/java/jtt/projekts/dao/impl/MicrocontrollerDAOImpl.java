@@ -15,11 +15,11 @@ public class MicrocontrollerDAOImpl implements MicrocontrolerDAO{
 	MicrocontrolerRespority controlResp;
 
 	@Override
-	public MicrocontrolerDAO insert(MicrocontrolerDAO value) {
-		List<MicrocontrolerDAO> users = getAllData();
+	public Microcontroller insert(Microcontroller value) {
+		List<Microcontroller> users = getAllData();
 		
 		boolean microExists = false;
-		for(MicrocontrolerDAO u : users) {
+		for(Microcontroller u : users) {
 			if(u.getAllData() == value.getAllData()) {
 				microExists = true;
 				break;
@@ -32,7 +32,7 @@ public class MicrocontrollerDAOImpl implements MicrocontrolerDAO{
 	}
 
 	@Override
-	public MicrocontrolerDAO update(MicrocontrolerDAO value, int id) {
+	public Microcontroller update(Microcontroller value, int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -44,19 +44,19 @@ public class MicrocontrollerDAOImpl implements MicrocontrolerDAO{
 	}
 
 	@Override
-	public int getID(MicrocontrolerDAO value) {
+	public int getID(Microcontroller value) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public MicrocontrolerDAO getByID(int id) {
+	public Microcontroller getByID(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<MicrocontrolerDAO> getAllData() {
+	public List<Microcontroller> getAllData() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -78,5 +78,8 @@ public class MicrocontrollerDAOImpl implements MicrocontrolerDAO{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
+
 
 }
