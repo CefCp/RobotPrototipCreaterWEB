@@ -5,21 +5,24 @@
   <style>
     .container {
       padding: 20px;
-      width: 2560px;
+      width: 100;
       background-color: white;
       display: flex;
       align-items: center;
       gap: 700px;
       margin: 0;
+       flex-wrap: wrap;
     }
     .container2 {
       padding: 20px;
-      width: 2560px;
+      width: 100;
       background-color: black;
       display: flex;
       align-items: center;
       gap: 70px;
       margin: 0;
+      
+      flex-wrap: wrap;
     }
     .sidenavb a {
       padding: 10px 8px 6px 70px;
@@ -41,6 +44,52 @@
     .content-section.active {
       display: block;
     }
+ .sidepanel{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: start;
+}
+
+.item:nth-child(1),
+.item:nth-child(2),
+.item:nth-child(3),
+.item:nth-child(4) {
+  width: 250px;
+  flex-grow: 1;
+}
+
+.pictures {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+
+.item:nth-child(1),
+.item:nth-child(5),
+.item:nth-child(7) {
+  height: 32%;
+  width: 40%;
+}
+
+.item:nth-child(2),
+.item:nth-child(8) {
+  height: 32%;
+  width: 30%;
+}
+
+.item:nth-child(3),
+.item:nth-child(6),
+.item:nth-child(9) {
+  height: 32%;
+  flex-grow: 1;
+}
+
+.item:nth-child(4) {
+  height: 32%;
+  width: 25%;
+}
   </style>
 </head>
 <body style="background-color:gray;">
@@ -54,81 +103,118 @@
   <div class="sidenavb"><a data-section="battery">Battery</a></div>
   <div class="sidenavb"><a data-section="board">Board</a></div>
   <div class="sidenavb"><a data-section="frame">Frame</a></div>
-  <div class="sidenavb"><a data-section="microcontroller">Microcontroller</a></div>
+  <div class="sidenavb"><a data-section="micro">Microcontroller</a></div>
   <div class="sidenavb"><a data-section="motor">Motor</a></div>
   <div class="sidenavb"><a data-section="remote">Remote</a></div>
   <div class="sidenavb"><a data-section="sensor">Sensor</a></div>
 </div>
 
 <!-- Content sections -->
-<div id="myBots" class="content-section active">
-  <h2>My Bots</h2>
-  <p>Content for My Bots goes here...</p>
-</div>
 
-<div id="battery" class="content-section">
-  <h2>Battery</h2>
-  <p>Details about Battery...</p>
-  <p>Type</p>
-  <div>
-  <input type="radio">Rechagable Battery</input>
-   <input type="radio">One Time Use</input> 
-   <br>
-    <p>Voltage</p>
-     <input type="number"></input>   TO    <input type="number"></input> 
-     
-       <p>Capicty</p>
-     <input type="number"></input>   TO    <input type="number"></input> 
-     
-     
-   </div>
-</div>
+<div class = "sidepanel">
+	<div id="myBots" class="content-section active">
+	  <h2>My Bots</h2>
+	  <p>Content for My Bots goes here...</p>
+	</div>
 
-<div id="board" class="content-section">
-  <h2>Board</h2>
-  <p>Details about Board...</p>
-  
-  <p>Size of the whole board</p>
-     <input type="number"></input>   TO    <input type="number"></input> 
+
+
+					<div id="battery" class="content-section">
+					  <h2>Battery</h2>
+					  <p>Details about Battery...</p>
+					  <p>Type</p>
+						  
+						  <input type="radio">Rechagable Battery</input>
+						   <input type="radio">One Time Use</input> 
+						   <br>
+						    <p>Voltage</p>
+						     <input type="number"></input>   TO    <input type="number"></input> 
+						     
+						       <p>Capicty</p>
+						     <input type="number"></input>   TO    <input type="number"></input> 
+					</div>
      
-       <p>Size  of the available space for microcontroller</p>
-     <input type="number"></input>   TO    <input type="number"></input> 
-</div>
+     
+     
+     
+	<div id="board" class="content-section">
+	  <h2>Board</h2>
+	  <p>Details about Board...</p>
+	  
+	  <p>Size of the whole board</p>
+	     <input type="number"></input>   TO    <input type="number"></input> 
+	     
+	       <p>Size  of the available space for microcontroller</p>
+	     <input type="number"></input>   TO    <input type="number"></input> 
+	</div>
 
-<div id="frame" class="content-section">
-  <h2>Frame</h2>
-  <p>Details about Frame...</p>
-  <div>
-	   <p>Material</p>
-  <input type="radio">Alumini</input>
-   <input type="radio"></input> 
-   <br>
-    <p>Size</p>
-     <input type="number"></input>   TO    <input type="number"></input> 
-      <p>Weight</p>
-     <input type="number"></input>   TO    <input type="number"></input> 
-</div>
+		<div id="frame" class="content-section">
+		  <h2>Frame</h2>
+		  <p>Details about Frame...</p>
+		  
+			   <p>Material</p>
+		  <input type="radio">Alumini</input>
+		   <input type="radio">Other</input> 
+		   <br>
+		    <p>Size</p>
+		     <input type="number"></input>   TO    <input type="number"></input> 
+		      <p>Weight</p>
+		     <input type="number"></input>   TO    <input type="number"></input> 
+		</div>
 
-<div id="microcontroller" class="content-section">
-  <h2>Microcontroller</h2>
-  <p>Details about Microcontroller...</p>
-</div>
+	<div id="micro" class="content-section">
+	  <h2>Microcontroller</h2>
+	  <p>Details about Microcontroller...</p>
+	  
+	      <p>Size</p>
+	     <input type="number"></input>   TO    <input type="number"></input> 
+	     
+	         <p>RAM</p>
+	     <input type="number"></input>   TO    <input type="number"></input>
+	     
+	         <p>Volt usage</p>
+	     <input type="number"></input>   TO    <input type="number"></input>  
+	</div>
 
 <div id="motor" class="content-section">
   <h2>Motor</h2>
   <p>Details about Motor...</p>
+  
+         <p>RMP(rotation per minute)</p>
+     <input type="number"></input>   TO    <input type="number"></input>
+     
+         <p>Volt usage</p>
+     <input type="number"></input>   TO    <input type="number"></input>  
 </div>
 
 <div id="remote" class="content-section">
   <h2>Remote</h2>
   <p>Details about Remote...</p>
+  
+         <p>Range</p>
+     <input type="number"></input>   TO    <input type="number"></input>
+     
+         <p>Battery type</p>
+     <input type="number"></input>   TO    <input type="number"></input>  
 </div>
 
 <div id="sensor" class="content-section">
   <h2>Sensor</h2>
   <p>Details about Sensor...</p>
+  
+         <p>Range</p>
+     <input type="number"></input>   TO    <input type="number"></input>
+     
+         <p>Accuracy</p>
+     <input type="number"></input>   TO    <input type="number"></input>  
+     
+     	   <p>Sensivity</p>
+  <input type="radio">Very senitive</input>
+   <input type="radio">sensitive</input> 
+     <input type="radio">slow senitive</input>
+   <input type="radio"> not sensitive</input> 
 </div>
-
+</div>
 <script>
   // Grab all nav links
   const navLinks = document.querySelectorAll('.sidenavb a');

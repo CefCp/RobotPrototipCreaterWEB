@@ -12,16 +12,30 @@
 <title>Let's Create Your Robot!</title>
 <style>
 .container {
-    padding: 20px;
-    width: 2560px;
-    background-color: white;
-    display: flex;
-    align-items: center; 
-    gap: 700px; 
-    margin:0;
+  display: flex;
+  gap: 20%;
+  flex-wrap: wrap;
+  align-content: start;
+  background-color: white;
+}
+
+.item:nth-child(1),
+.item:nth-child(4) {
+  width: 100%;
+  height: 5%;
+}
+
+.item:nth-child(2) {
+  width: 25%;
+  height: 75%;
+}
+
+.item:nth-child(3) {
+  flex-grow: 1;
+  height: 75%;
 }
 .container2 {
-    padding: 20px;
+    padding: 20%;
     background-color: gray;
     display: flex;
     align-items: center; 
@@ -61,15 +75,23 @@ h1 {
 
 .sidenavb a {
 	 display: flex;
-  padding: 10px 8px 6px 700px;
+  padding: 10px 8px 6px 500px;
 
   margin: 0 auto;
   text-decoration: none;
   font-size: 25px;
   color: white;
-  display: block;
+  
   align-items: center; 
   
+  
+  display: flex;
+ 
+  flex-wrap: wrap;
+}
+
+.item:nth-child(2) {
+  flex-grow: 1;
 }
 
 

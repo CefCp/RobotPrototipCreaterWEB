@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Login Form</title>
-
-  <!-- Bootstrap CDN -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <!-- Custom Styles -->
-  <style>o
+	<title>Staff login</title>
+	</head>
+	
+ <style>
+	 
     body {
       background-image: url(/images/bgcyber.jpg);
       
@@ -55,12 +50,17 @@
       document.getElementById("output").innerHTML = "Name: " + name + "<br>Password: " + password;
     }
   </script>
-</head>
-
-<body style="background-image:url(/images/bgcyber.jpg);">
-  <div class="background">
+	 </style>
+	
+	
+	
+<body>
+	<div class= "container">
+		<h1>Staff Login!</h1>
+		
+		  <div class="background">
     <h2>Log in</h2>
-    <form action = "/login" method = "post">
+    <form action = "/stafflogin" method = "post">
       <div class="form-group">
         <label for="name">E-Mail</label>
         <input type="email" class="form-control" name="email" placeholder="preview@email.com" required>
@@ -73,14 +73,9 @@
        <a href = "/index"> <button type="submit" class="btn btn-primary">Log in</button> </a>
       </div>
     </form>
-    <p>Don't have an <a href="/register" style="color: #fff; text-decoration: underline;">account</a>?</p>
-    <br>
-     <p>Staff <a href="/stafflogin" style="color: #fff; text-decoration: underline;">account</a>?</p>
-  </div>
-   
-  
-  <div id="output"></div>
-  
-  
-</body>
-</html>
+    <a href = "/casino">shhh</a>
+		</div>
+	
+	
+	
+	</body>
