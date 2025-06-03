@@ -20,6 +20,7 @@ public class WebController {
 	@Autowired
 	UserDAOImpl userService;
 	@GetMapping("/")
+	
 	public String greeting(Model model) {
 		// userDAO.insert(new User("aigars2", "aigars.asaks@jak.lv", "qwerty123", "admin"));
 		model.addAttribute("message", "hello world");
@@ -27,6 +28,7 @@ public class WebController {
 		
 		
 	}
+	
 	@GetMapping("/login")
 	public String greeting2(Model model) {
 		
@@ -92,6 +94,8 @@ public class WebController {
 		
 		
 	}
+	
+	
 	@PostMapping("/login")
 	public String login(@RequestParam String password, @RequestParam String email, Model model) throws SQLException {
 		if(userService.getByEmail(email) == null) {
@@ -111,22 +115,25 @@ public class WebController {
 		
 	}
 	
+	
 	@PostMapping("/stafflogin")
 	public String stafflogin(@RequestParam String password, @RequestParam (value = "email")String email, Model model) throws SQLException {
 		if(userService.getByEmail(email) == null) {
 			model.addAttribute("error", "email isn't added to our data");
 			return "stafflogin";
-		}else if(userService.getByEmail(email).getPassword() == password && userService.getByEmail(email).getRole() == "admin") {
-			return "staffMenu";
+		}
+		if(userService.getByEmail(email).getPassword() == password && userService.getByEmail(email).getRole() == "user") {
 			
+			model.addAttribute("error", "your not an admin ! go back to persona log in!");
+			return "index";
 		}
 		
-		model.addAttribute("error", "your not an admin ! go back to persona log in!");
-		return "index";
 		
-	
+		
+		return "staffMenu";
 		
 		
 		
 	}
-}
+	}
+	
