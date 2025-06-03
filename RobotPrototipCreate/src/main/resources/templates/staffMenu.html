@@ -26,6 +26,7 @@
 .item:nth-child(2) {
   width: 25%;
   height: 75%;
+
 }
 
 .item:nth-child(3) {
@@ -47,6 +48,17 @@
       background-color: black;
       cursor: pointer;
     }
+    
+        .content-section {
+      display: none;  /* hide all by default */
+      padding: 300;
+      background-color: white;
+      margin-top: 300;
+    }
+    /* Show the active section */
+    .content-section.active {
+      display: block;
+    }
 	  </style>
   <body >
 <div class="container">
@@ -61,8 +73,43 @@
 
   </div>
   <div class="item"></div>
+  	  <div id="Users" class="content-section active">
+	  <h2>My Bots</h2>
+	  <p>Content for My Bots goes here...1</p>
+	  
+	</div>
+	<div id="addItems" class="content-section active">
+	  <h2>My Bots</h2>
+	  <p>Content for My Bots goes here...2</p>
+	</div>
+	
+	<div id="deleteItems" class="content-section active">
+	  <h2>My Bots</h2>
+	  <p>Content for My Bots goes here...3</p>
+	</div>
+	
+		<div id="updateItems" class="content-section active">
+	  <h2>My Bots</h2>
+	  <p>Content for My Bots goes here...4</p>
+	</div>
   <div class="item"></div>
 </div>
-	  
+	  <script>
+  // Grab all nav links
+  const navLinks = document.querySelectorAll('.sidenavb a');
+  const sections = document.querySelectorAll('.content-section');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const targetSection = link.getAttribute('data-section');
+
+      // Hide all sections
+      sections.forEach(section => section.classList.remove('active'));
+
+      // Show target section
+      document.getElementById(targetSection).classList.add('active');
+    });
+  });
+</script>
 	  </body>
 	  
