@@ -63,6 +63,15 @@ public class WebController {
 		
 	}
 	
+	@GetMapping("/staffMenu")
+	public String greeting6(Model model) {
+		
+		model.addAttribute("message", "hello world");
+		return "staffMenu";
+		
+		
+	}
+	
 	@PostMapping("/signup")
 	public String signup(@RequestParam String username,  @RequestParam String password,@RequestParam String email,  Model model) throws SQLException {
 
@@ -103,19 +112,19 @@ public class WebController {
 	}
 	
 	@PostMapping("/stafflogin")
-	public String stafflogin(@RequestParam String password, @RequestParam String email, Model model) throws SQLException {
+	public String stafflogin(@RequestParam String password, @RequestParam (value = "email")String email, Model model) throws SQLException {
 		if(userService.getByEmail(email) == null) {
 			model.addAttribute("error", "email isn't added to our data");
 			return "stafflogin";
-		}else if(userService.getByEmail(email).getPassword() != password && userService.getByEmail(email).getRole() != "admin") {
-				model.addAttribute("error", "your not an admin ! go back to persona log in!");
-				return "index";
+		}else if(userService.getByEmail(email).getPassword() == password && userService.getByEmail(email).getRole() == "admin") {
+			return "staffMenu";
 			
 		}
 		
-		
-		
+		model.addAttribute("error", "your not an admin ! go back to persona log in!");
 		return "index";
+		
+	
 		
 		
 		

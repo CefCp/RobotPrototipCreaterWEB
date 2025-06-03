@@ -13,10 +13,10 @@ public interface UserRespority extends CrudRepository<User, Integer>{
 	User findByName(@Param("name") String name);
 	
 	@Query("SELECT e FROM User e WHERE e.email = :email")
-	User findByEmail(@Param("name") String email);
+	User findByEmail(@Param("email") String email);
 	
 	@Query("Select r FROM User r Where r.role = :role")
-	List<User> findBYRole(@Param("name") String role);
+	List<User> findBYRole(@Param("role") String role);
 	
 	
 }
