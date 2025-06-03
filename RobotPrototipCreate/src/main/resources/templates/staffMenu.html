@@ -49,16 +49,22 @@
       cursor: pointer;
     }
     
-        .content-section {
+.content-section {
       display: none;  /* hide all by default */
-      padding: 300;
+     height: 800;
+     width: 1340;
       background-color: white;
-      margin-top: 300;
+      margin-top: 30;
     }
     /* Show the active section */
     .content-section.active {
       display: block;
     }
+    
+    table, th, td {
+  border:1px solid black;
+  margin: auto;
+}
 	  </style>
   <body >
 <div class="container">
@@ -74,23 +80,40 @@
   </div>
   <div class="item"></div>
   	  <div id="Users" class="content-section active">
-	  <h2>My Bots</h2>
-	  <p>Content for My Bots goes here...1</p>
+	  <h2>Users</h2>
+	<table>
+  <tr>
+    <th>Email</th>
+    <th>User</th>
+    <th>Role</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+
 	  
 	</div>
 	<div id="addItems" class="content-section active">
-	  <h2>My Bots</h2>
-	  <p>Content for My Bots goes here...2</p>
+	  <h2>Add Items</h2>
+	  <p>!</p>
 	</div>
 	
 	<div id="deleteItems" class="content-section active">
-	  <h2>My Bots</h2>
-	  <p>Content for My Bots goes here...3</p>
+	  <h2>Delete Items</h2>
+	  <p>!</p>
 	</div>
 	
 		<div id="updateItems" class="content-section active">
-	  <h2>My Bots</h2>
-	  <p>Content for My Bots goes here...4</p>
+	  <h2>Update Items</h2>
+	  <p>! </p>
 	</div>
   <div class="item"></div>
 </div>
